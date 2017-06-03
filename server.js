@@ -33,5 +33,5 @@ app.get('/ethereum_price', function(req, res) {
   });
 });
 
-app.listen(8080);
+app.listen(process.env.port || 8080);
 console.log("App listening on port 8080");
