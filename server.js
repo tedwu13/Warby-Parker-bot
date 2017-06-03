@@ -5,6 +5,10 @@ var request = require('request');
 var app = express();
 app.use(morgan('dev'));
 
+app.get('/', function(req, res) {
+  res.json({});
+});
+
 app.get('/ethereum_price', function(req, res) {
   request.get({
     'url': 'https://api.coinbase.com/v2/prices/ETH-USD/spot',
@@ -33,5 +37,6 @@ app.get('/ethereum_price', function(req, res) {
   });
 });
 
-app.listen(process.env.port || 8080);
-console.log("App listening on port 8080");
+var port = process.env.port || 8080;
+app.listen(port);
+console.log("App listening on port " + port);
