@@ -24,9 +24,9 @@ app.get('/ethereum_price', function(req, res) {
 
       var message;
       if (firstName !== undefined && firstName !== "") {
-        messageText = firstName + ', the current spot price of Ethereum on Coinbase is $' + price + '!';
+        messageText = firstName + ', the current spot price of Ethereum on Coinbase is $' + price + '.';
       } else {
-        messageText = 'The current spot price of Ethereum on Coinbase is $' + price + '!';
+        messageText = 'The current spot price of Ethereum on Coinbase is $' + price + '.';
       }
       res.json({
         'messages': [
