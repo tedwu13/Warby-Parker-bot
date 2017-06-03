@@ -1,0 +1,27 @@
+{
+  "name": "ethereum_price_bot",
+  "version": "1.0.0",
+  "description": "Ethereum Price Bot",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsmichaelwang/ethereum_price_bot.git"
+  },
+  "keywords": [
+    "ethereum",
+    "price",
+    "bot"
+  ],
+  "author": "Michael Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsmichaelwang/ethereum_price_bot/issues"
+  },
+  "homepage": "https://github.com/itsmichaelwang/ethereum_price_bot#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
