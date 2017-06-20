@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan  = require('morgan');
 var request = require('request');
+var _ = require('lodash');
 
 var app = express();
 app.use(morgan('dev'));
@@ -9,29 +10,58 @@ app.get('/', function(req, res) {
   res.json({});
 });
 
-app.get('/ethereum_price', function(req, res) {
+app.get('/sources', function(req, res) {
   request.get({
-    'url': 'https://api.coinbase.com/v2/prices/ETH-USD/spot',
+    'url': 'https://newsapi.org/v1/sources',
     'json': true
-  }, function(err, coinbase_res, data) {
+  }, function(err, response, body) {
     if (err) {
       console.log('Error:', err);
-    } else if (coinbase_res.statusCode != 200) {
-      console.log('Status:', res.statusCode);
+    } else if (response.statusCode != 200) {
+      console.log('Status:', response.statusCode);
     } else {
-      var firstName = req.query.first_name;
-      var price = data.data.amount;
+      var sources = _.filter(body.sources, req.query);
+      console.log("leng diff", body.sources.length, sources.length);
 
-      var message;
-      if (firstName !== undefined && firstName !== "") {
-        messageText = firstName + ', the current spot price of Ethereum on Coinbase is $' + price + '.';
-      } else {
-        messageText = 'The current spot price of Ethereum on Coinbase is $' + price + '.';
-      }
+      // { id: 'time',
+      //     name: 'Time',
+      //     description: 'Breaking news and analysis from TIME.com. Politics, world news, photos, video, tech reviews, health, science and entertainment news.',
+      //     url: 'http://time.com',
+      //     category: 'general',
+      //     language: 'en',
+      //     country: 'us',
+      //     urlsToLogos: { small: '', medium: '', large: '' },
+      //     sortBysAvailable: [ 'top', 'latest' ] },
+      var jsonElements = [];
+      _.forEach(sources, function(source, id) {
+        var finalSource = {
+          "title": source.name,
+          "image_url": source.urlsToLogos.medium,
+          "subtitle": source.description,
+          "buttons": [
+            {
+              "type":"web_url",
+              "url": source.url,
+              "title":"Go to URL"
+            },
+          ]
+        }
+        jsonElements.push(finalSource)
+      });
+
       res.json({
-        'messages': [
-          { 'text': messageText }
-        ]
+        "messages": [
+            {
+              "attachment":{
+                "type":"template",
+                "payload":{
+                  "template_type":"generic",
+                  "elements": jsonElements
+                }
+              }
+            }
+          ]
+
       });
     }
   });

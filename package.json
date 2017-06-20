@@ -1,26 +1,18 @@
 {
-  "name": "ethereum_price_bot",
+  "name": "news_api",
   "version": "1.0.0",
-  "description": "Ethereum Price Bot",
+  "description": "News Api for chatfuel json api",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/itsmichaelwang/ethereum_price_bot.git"
-  },
   "keywords": [
-    "ethereum",
-    "price",
+    "news",
+    "messenger",
     "bot"
   ],
-  "author": "Michael Wang",
+  "author": "Ted Wu",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/itsmichaelwang/ethereum_price_bot/issues"
-  },
-  "homepage": "https://github.com/itsmichaelwang/ethereum_price_bot#readme",
   "dependencies": {
     "express": "^4.15.3",
     "morgan": "^1.8.2",
