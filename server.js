@@ -24,10 +24,21 @@ app.get('/sources', function(req, res) {
       console.log("leng diff", body.sources.length, sources.length);
 
       var jsonElements = [];
+      var maxSubtitleLength = 79; //max subtitle length
+      var maxTitleLength = 39; // max title length
+
       _.forEach(sources, function(source, id) {
+        if (source.description.length > 79) { 
+          source.description = source.description.substring(0, maxSubtitleLength);
+          console.log("subtitle LENGTH MORE THAN 80");
+        } 
+        if (source.name.length > maxTitleLength) {
+          source.name = source.name.substring(0, maxTitleLength);
+          console.log("title LENGTH MORE THAN 80");
+        }
         var finalSource = {
           "title": source.name,
-          "image_url": source.urlsToLogos.medium,
+          "image_url": "https://www.fortlewis.edu/portals/165/icons/news-features.png",
           "subtitle": source.description,
           "buttons": [
             {
