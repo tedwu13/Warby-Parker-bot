@@ -26,7 +26,7 @@ app.get('/sources', function(req, res) {
       var jsonElements = [];
       var maxSubtitleLength = 79; //max subtitle length
       var maxTitleLength = 39; // max title length
-      var maxGalleryItems = 8; //max Gallery items length
+      var maxGalleryItems = 9; //max Gallery items length
       _.forEach(sources, function(source, id) {
         if (source.description.length > 79) { 
           source.description = source.description.substring(0, maxSubtitleLength);
@@ -49,9 +49,8 @@ app.get('/sources', function(req, res) {
         jsonElements.push(finalSource);
       });
 
-      var elements = _.slice(jsonElements, 0, 8);
+      var elements = jsonElements.length <= maxGalleryItems ? jsonElements : _.slice(jsonElements, 0, maxGalleryItems);
 
-      console.log("length of jsonElements", elements.length);
       res.json({
         "messages": [
             {
