@@ -1,0 +1,146 @@
+{  
+   "messages":[  
+      {  
+         "attachment":{  
+            "type":"template",
+            "payload":{  
+               "template_type":"generic",
+               "elements":[  
+                  {  
+                     "title":"Ars Technica",
+                     "image_url":"",
+                     "subtitle":"The PC enthusiast's resource. Power users and the tools they love, without computing religion.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"http://arstechnica.com",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"Engadget",
+                     "image_url":"",
+                     "subtitle":"Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"https://www.engadget.com",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"Gruenderszene",
+                     "image_url":"",
+                     "subtitle":"Online-Magazin für Startups und die digitale Wirtschaft. News und Hintergründe zu Investment, VC und Gründungen.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"http://www.gruenderszene.de",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"Hacker News",
+                     "image_url":"",
+                     "subtitle":"Hacker News is a social news website focusing on computer science and entrepreneurship. It is run by Paul Graham's investment fund and startup incubator, Y Combinator. In general, content that can be submitted is defined as \"anything that gratifies one's intellectual curiosity\".",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"https://news.ycombinator.com",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"Recode",
+                     "image_url":"",
+                     "subtitle":"Get the latest independent tech news, reviews and analysis from Recode with the most informed and respected journalists in technology and media.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"http://www.recode.net",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"T3n",
+                     "image_url":"",
+                     "subtitle":"Das Online-Magazin bietet Artikel zu den Themen E-Business, Social Media, Startups und Webdesign.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"http://t3n.de",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"TechCrunch",
+                     "image_url":"",
+                     "subtitle":"TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"https://techcrunch.com",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"TechRadar",
+                     "image_url":"",
+                     "subtitle":"The latest technology news and reviews, covering computing, home entertainment systems, gadgets and more.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"http://www.techradar.com",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"The Next Web",
+                     "image_url":"",
+                     "subtitle":"The Next Web is one of the world’s largest online publications that delivers an international perspective on the latest news about Internet technology, business and culture.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"http://thenextweb.com",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"The Verge",
+                     "image_url":"",
+                     "subtitle":"The Verge covers the intersection of technology, science, art, and culture.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"http://www.theverge.com",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  },
+                  {  
+                     "title":"Wired.de",
+                     "image_url":"",
+                     "subtitle":"Wired reports on how emerging technologies affect culture, the economy and politics.",
+                     "buttons":[  
+                        {  
+                           "type":"web_url",
+                           "url":"https://www.wired.de",
+                           "title":"Go to URL"
+                        }
+                     ]
+                  }
+               ]
+            }
+         }
+      }
+   ]
+}
