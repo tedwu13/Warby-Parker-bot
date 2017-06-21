@@ -26,15 +26,13 @@ app.get('/sources', function(req, res) {
       var jsonElements = [];
       var maxSubtitleLength = 79; //max subtitle length
       var maxTitleLength = 39; // max title length
-
+      var maxGalleryItems = 8; //max Gallery items length
       _.forEach(sources, function(source, id) {
         if (source.description.length > 79) { 
           source.description = source.description.substring(0, maxSubtitleLength);
-          console.log("subtitle LENGTH MORE THAN 80");
         } 
         if (source.name.length > maxTitleLength) {
           source.name = source.name.substring(0, maxTitleLength);
-          console.log("title LENGTH MORE THAN 80");
         }
         var finalSource = {
           "title": source.name,
@@ -48,10 +46,12 @@ app.get('/sources', function(req, res) {
             },
           ]
         }
-        jsonElements.push(finalSource)
+        jsonElements.push(finalSource);
       });
 
-      console.log("jsonElements", jsonElements);
+      var elements = _.slice(jsonElements, 0, 8);
+
+      console.log("length of jsonElements", elements.length);
       res.json({
         "messages": [
             {
@@ -59,7 +59,7 @@ app.get('/sources', function(req, res) {
                 "type":"template",
                 "payload":{
                   "template_type":"generic",
-                  "elements": jsonElements
+                  "elements": elements
                 }
               }
             }
