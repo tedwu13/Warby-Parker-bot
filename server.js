@@ -12,7 +12,7 @@ app.get('/', function(req, res) {
 
 app.get('/sources', function(req, res) {
   request.get({
-    'url': 'https://newsapi.org/v1/sources',
+    'url': 'https://newsapi.org/v1/sources?language=en&country=us',
     'json': true
   }, function(err, response, body) {
     if (err) {
@@ -20,12 +20,14 @@ app.get('/sources', function(req, res) {
     } else if (response.statusCode != 200) {
       console.log('Status:', response.statusCode);
     } else {
-      if (req.query.language) { req.query.language = req.query.language.slice(0,2) };
+      if (req.query.language) { 
+        req.query.language = req.query.language.slice(0,2)
+      };
+      req.query.category = req.query.category.toLowerCase();;
+      // since user attributes is Technology, General, etc, make it lowercase for the parameters
+
       // since language is en_US based on ISO 639-1, I have to slice the query
       var sources = _.filter(body.sources, req.query);
-      console.log("leng diff", body.sources.length, sources.length);
-      console.log(req.query);
-
 
       var jsonElements = [];
       var maxSubtitleLength = 80; //max subtitle length
