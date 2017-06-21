@@ -23,15 +23,6 @@ app.get('/sources', function(req, res) {
       var sources = _.filter(body.sources, req.query);
       console.log("leng diff", body.sources.length, sources.length);
 
-      // { id: 'time',
-      //     name: 'Time',
-      //     description: 'Breaking news and analysis from TIME.com. Politics, world news, photos, video, tech reviews, health, science and entertainment news.',
-      //     url: 'http://time.com',
-      //     category: 'general',
-      //     language: 'en',
-      //     country: 'us',
-      //     urlsToLogos: { small: '', medium: '', large: '' },
-      //     sortBysAvailable: [ 'top', 'latest' ] },
       var jsonElements = [];
       _.forEach(sources, function(source, id) {
         var finalSource = {
