@@ -20,15 +20,19 @@ app.get('/sources', function(req, res) {
     } else if (response.statusCode != 200) {
       console.log('Status:', response.statusCode);
     } else {
+      if (req.query.language) { req.query.language = req.query.language.slice(0,2) };
+      // since language is en_US based on ISO 639-1, I have to slice the query
       var sources = _.filter(body.sources, req.query);
       console.log("leng diff", body.sources.length, sources.length);
+      console.log(req.query);
+
 
       var jsonElements = [];
-      var maxSubtitleLength = 79; //max subtitle length
-      var maxTitleLength = 39; // max title length
+      var maxSubtitleLength = 80; //max subtitle length
+      var maxTitleLength = 40; // max title length
       var maxGalleryItems = 9; //max Gallery items length
       _.forEach(sources, function(source, id) {
-        if (source.description.length > 79) { 
+        if (source.description.length > maxSubtitleLength) {
           source.description = source.description.substring(0, maxSubtitleLength);
         } 
         if (source.name.length > maxTitleLength) {
@@ -51,20 +55,29 @@ app.get('/sources', function(req, res) {
 
       var elements = jsonElements.length <= maxGalleryItems ? jsonElements : _.slice(jsonElements, 0, maxGalleryItems);
 
-      res.json({
-        "messages": [
-            {
-              "attachment":{
-                "type":"template",
-                "payload":{
-                  "template_type":"generic",
-                  "elements": elements
+      if (elements.length > 0) {
+        res.json({
+          "messages": [
+              {
+                "attachment":{
+                  "type":"template",
+                  "payload":{
+                    "template_type":"generic",
+                    "elements": elements
+                  }
                 }
               }
-            }
-          ]
+            ]
+        });
+      }
+      else {
+        res.json({
+         "messages": [
+           {"text": "Sorry I don't have any results for you"},
+         ]
+        });
 
-      });
+      }
       // res.json({
       //   "messages": [
       //      {
