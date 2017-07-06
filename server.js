@@ -337,12 +337,52 @@ app.get('/distance', function(req, res) {
       },
       32: {
         address: "Domain Northside, Austin",
+        image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjo-r-h8fPUAhVCwmMKHS_dAB4QjRwIBw&url=https%3A%2F%2Fwww.appearhere.co.uk%2Finspire%2Fblog%2Finsight-retail-is-the-new-black&psig=AFQjCNE-6P2E2rn_rZAVEGbAyO7mhUN_Zw&ust=1499403914797422",
         url: "https://www.warbyparker.com/retail/austin/domain-northside",
         lat: 30.403008,
         lon: -97.720938,
       },
       33: {
-        
+        address: "South Congress, Austin",
+        image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjo-r-h8fPUAhVCwmMKHS_dAB4QjRwIBw&url=https%3A%2F%2Fwww.appearhere.co.uk%2Finspire%2Fblog%2Finsight-retail-is-the-new-black&psig=AFQjCNE-6P2E2rn_rZAVEGbAyO7mhUN_Zw&ust=1499403914797422",
+        url: "https://www.warbyparker.com/retail/austin/1317-south-congress",
+        lat: 30.250408,
+        lon: -97.749054,
+      },
+      34: {
+        address: "NorthPark Center, Dallas",
+        image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjo-r-h8fPUAhVCwmMKHS_dAB4QjRwIBw&url=https%3A%2F%2Fwww.appearhere.co.uk%2Finspire%2Fblog%2Finsight-retail-is-the-new-black&psig=AFQjCNE-6P2E2rn_rZAVEGbAyO7mhUN_Zw&ust=1499403914797422",
+        url: "https://www.warbyparker.com/retail/dallas/northpark",
+        lat: 32.868502,
+        lon: -96.773512,
+      },
+      35: {
+        address: "Warby Parker Classroom, Dallas",
+        image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjo-r-h8fPUAhVCwmMKHS_dAB4QjRwIBw&url=https%3A%2F%2Fwww.appearhere.co.uk%2Finspire%2Fblog%2Finsight-retail-is-the-new-black&psig=AFQjCNE-6P2E2rn_rZAVEGbAyO7mhUN_Zw&ust=1499403914797422",
+        url: "https://www.warbyparker.com/retail/dallas/2008-n-henderson-ave",
+        lat: 32.812472,
+        lon: -96.775448,
+      },
+      36: {
+        address: "Tysons Corner, Virginia",
+        image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjo-r-h8fPUAhVCwmMKHS_dAB4QjRwIBw&url=https%3A%2F%2Fwww.appearhere.co.uk%2Finspire%2Fblog%2Finsight-retail-is-the-new-black&psig=AFQjCNE-6P2E2rn_rZAVEGbAyO7mhUN_Zw&ust=1499403914797422",
+        url: "https://www.warbyparker.com/retail/virginia/tysons-corner",
+        lat: 38.916556,
+        lon: -77.221404,
+      },
+      37: {
+        address: "University Village, Seattle",
+        image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjo-r-h8fPUAhVCwmMKHS_dAB4QjRwIBw&url=https%3A%2F%2Fwww.appearhere.co.uk%2Finspire%2Fblog%2Finsight-retail-is-the-new-black&psig=AFQjCNE-6P2E2rn_rZAVEGbAyO7mhUN_Zw&ust=1499403914797422",
+        url: "https://www.warbyparker.com/retail/seattle/university-village",
+        lat: 47.663208,
+        lon: -122.299142,
+      },
+      38: {
+        address: "Warby Parker Writer's Block",
+        image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjo-r-h8fPUAhVCwmMKHS_dAB4QjRwIBw&url=https%3A%2F%2Fwww.appearhere.co.uk%2Finspire%2Fblog%2Finsight-retail-is-the-new-black&psig=AFQjCNE-6P2E2rn_rZAVEGbAyO7mhUN_Zw&ust=1499403914797422",
+        url: "https://www.warbyparker.com/retail/seattle/3501-fremont-ave-n",
+        lat: 45.018715,
+        lon: -93.295957
       }
     }
 
