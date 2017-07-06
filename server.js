@@ -424,7 +424,7 @@ app.get('/distance', function(req, res) {
                   {
                     "title": closestRetail.address,
                     "image_url":closestRetail.image_url,
-                    "subtitle":"Find available slots for eye checkups",
+                    "subtitle":"Find the closest retail stores near you to get personal assistance",
                     "buttons":[
                       {
                         "type":"web_url",
